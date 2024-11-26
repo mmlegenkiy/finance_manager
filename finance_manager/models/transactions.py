@@ -31,6 +31,6 @@ class Transaction:
         self.date = date if isinstance(date, datetime) else datetime.strptime(date, '%Y-%m-%d').date()
 
     def __repr__(self):
-        return f'Transaction(amount.{self.amount}, category.{self.category}, date.{self.date.date()})'
+        return f'Transaction(amount.{self.amount}, category.{self.category}, date.{self.date})'
 
 

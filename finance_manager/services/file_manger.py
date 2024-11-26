@@ -14,7 +14,7 @@ class FileManager:
         with open(file_name, "w") as file:
             json.dump([{'amount': transaction.amount,
                         'category': transaction.category,
-                        'date': datetime.strptime(transaction.date, "%Y-%m-%d %H:%M:%S")} for  transaction in data], file)
+                        'date': datetime.strftime(transaction.date, "%Y-%m-%d %H:%M:%S")} for  transaction in data], file)
 
     @staticmethod
     def load_from_file(file_name):

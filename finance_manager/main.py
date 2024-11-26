@@ -33,6 +33,12 @@ def my_func_main():
     loaded_transactions = FileManager.load_from_file("transactions.json")
     print(f'loaded_transactions: {loaded_transactions}')
 
+    file_name = 'some_transaction.json'
+    save_transaction(file_name, t1)
+    print(t1)
+    t1_1 = load_transactions(file_name)
+    print(t1_1)
+
 
 def save_transaction(file_name, transactions):
     with FileContext(file_name, "w") as  file:
