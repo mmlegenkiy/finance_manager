@@ -5,6 +5,7 @@ from .services.file_manger import FileManager
 from .utils.context import FileContext
 
 
+
 def my_func_main():
     """
     Create transaction
@@ -32,6 +33,7 @@ def my_func_main():
 
     loaded_transactions = FileManager.load_from_file("transactions.json")
     print(f'loaded_transactions: {loaded_transactions}')
+    print(f'type(loaded_transactions): {loaded_transactions[0].date}')
 
     file_name = 'some_transaction.json'
     save_transaction(file_name, t1)
